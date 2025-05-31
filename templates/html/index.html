@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>BagBazaar Style Homepage</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo" aria-label="BagBazaar Logo">
+        <a href="/bagbazzar.html">BagBazaar</a>
+      </div>
+      <div class="header-icons" role="navigation" aria-label="Top navigation">
+        <a href="{{ url_for('seller') }}" tabindex="0">Seller</a>
+        <a href="{{ url_for('buyer') }}" tabindex="0">Buyer</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Hero section">
+      <h1>
+        ALL in one connecting platform <br> BUYERS & SELLERS from Bags Industry
+      </h1>
+      <h2>Find Your Perfect Bag at BagBazaar</h2>
+      <p>
+        Shop from a wide range of bags including backpacks, tote bags, gym bags,
+        and more!
+      </p>
+    </section>
+
+    <section class="categories" aria-label="Product Categories">
+      <h2>Top Categories</h2>
+      <div class="category-list">
+        <a
+          href="/products/bags"
+          class="category-item"
+          role="button"
+          aria-pressed="false"
+        >
+          <div class="category-icon">🎒</div>
+          <div class="category-label">Backpacks</div>
+        </a>
+
+        <a
+          href="/products/bags"
+          class="category-item"
+          role="button"
+          aria-pressed="false"
+        >
+          <div class="category-icon">👜</div>
+          <div class="category-label">Tote Bags</div>
+        </a>
+
+        <a
+          href="/products/bags"
+          class="category-item"
+          role="button"
+          aria-pressed="false"
+        >
+          <div class="category-icon">💼</div>
+          <div class="category-label">Laptop Bags</div>
+        </a>
+
+        <a
+          href="/products/bags"
+          class="category-item"
+          role="button"
+          aria-pressed="false"
+        >
+          <div class="category-icon">🎽</div>
+          <div class="category-label">Gym Bags</div>
+        </a>
+
+        <a
+          href="/products/bags"
+          class="category-item"
+          role="button"
+          aria-pressed="false"
+        >
+          <div class="category-icon">🎒</div>
+          <div class="category-label">School Bags</div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 BagBazaar. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

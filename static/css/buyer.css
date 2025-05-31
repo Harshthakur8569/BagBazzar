@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #1a7f37;
+  color: white;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 50px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 1px;
+  user-select: none;
+  color: #ff7f00;
+}
+
+nav {
+  display: none;
+}
+
+/* Right side header icons */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.header-icons a {
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: rgba(255 255 255 / 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.header-icons a:hover {
+  background: rgba(255 255 255 / 0.3);
+}
+
+/* MAIN CONTENT */
+.container {
+  width: 80%;
+  margin: 100px auto 20px; /* Adjusted to add space for fixed header */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+}
+
+h1 {
+  color: #1a7f37;
+  text-align: center;
+}
+
+h2 {
+  color: #1a7f37;
+  text-align: center;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #1a7f37;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #168a28;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a7f37;
+  color: white;
+  margin-top: 20px;
+}

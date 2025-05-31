@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Backpacks - BagBazaar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><a href="{{ url_for('index') }}">BagBazaar</a></div>
+    <nav>
+      <a href="{{ url_for('seller') }}">Seller</a>
+      <a href="{{ url_for('buyer') }}">Buyer</a>
+    </nav>
+  </header>
+
+  <!-- Backpacks Section -->
+  <main class="product-section">
+    <h1>Backpack Collection</h1>
+    <div class="product-grid">
+
+      {% for i in range(1, 21) %}
+      <div class="product-card">
+        <img src="{{ url_for('static', filename='images/backpacks/backpack' ~ i ~ '.jpg') }}" alt="Backpack {{ i }}">
+        <h2>Backpack Model {{ i }}</h2>
+        <p>A stylish and durable backpack perfect for travel or school.</p>
+        <p class="price">$49.99</p>
+        <button>Add to Cart</button>
+      </div>
+      {% endfor %}
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BagBazaar. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

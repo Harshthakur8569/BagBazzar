@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/seller.css') }}">
+  <script>
+    function validateSellerForm(event) {
+      const phone = document.getElementById('phone').value;
+      const phonePattern = /^\d{10}$/;
+      if (!phonePattern.test(phone)) {
+        alert("Phone number must be 10 digits.");
+        event.preventDefault();
+        return false;
+      }
+
+      const name = document.getElementById('name').value;
+      const namePattern = /^[A-Za-z\s]+$/;
+      if (!namePattern.test(name)) {
+        alert("Name must contain only letters and spaces.");
+        event.preventDefault();
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo" aria-label="BagBazaar Logo"> 
+      <a href="{{ url_for('index') }}">BagBazaar</a>
+    </div>
+    <div class="header-icons" role="navigation" aria-label="Top navigation">
+      <a href="{{ url_for('seller') }}">Seller</a>
+      <a href="{{ url_for('buyer') }}">Buyer</a>
+    </div>
+  </header>
+
+  <!-- Seller Info Form -->
+  <div class="container">
+    <h2>Seller Information</h2>
+    <form action="{{ url_for('seller') }}" method="POST" enctype="multipart/form-data" onsubmit="return validateSellerForm(event)">
+
+      <!-- Seller Info -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Phone number must be exactly 10 digits">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+      </div>
+
+      <!-- Bag Info -->
+      <h3>Bag Information</h3>
+
+      <div class="form-group">
+        <label for="bag_name">Bag Name</label>
+        <input type="text" id="bag_name" name="bag_name" placeholder="Enter the name of the bag" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bag_description">Bag Description</label>
+        <textarea id="bag_description" name="bag_description" rows="4" placeholder="Enter a brief description of the bag" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="bag_price">Price</label>
+        <input type="number" id="bag_price" name="bag_price" placeholder="Enter the price of the bag" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bag_category">Bag Category</label>
+        <select id="bag_category" name="bag_category" required>
+          <option value="backpack">Backpack</option>
+          <option value="tote">Tote Bag</option>
+          <option value="gym">Gym Bag</option>
+          <option value="laptop">Laptop Bag</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bag_image">Upload Bag Image</label>
+        <input type="file" id="bag_image" name="bag_image" accept="image/*" required>
+      </div>
+
+      <button type="submit">Submit Details</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 BagBazaar. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

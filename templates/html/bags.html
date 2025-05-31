@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Bags</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bags.css') }}">
+</head>
+<body>
+
+  <!-- Common Header -->
+  <header>
+    <div class="logo" aria-label="BagBazaar Logo">
+      <a href="{{ url_for('index') }}">BagBazaar</a>
+    </div>
+    <div class="header-icons" role="navigation" aria-label="Top navigation">
+      <a href="{{ url_for('seller') }}" tabindex="0">Seller</a>
+      <a href="{{ url_for('buyer') }}" tabindex="0">Buyer</a>
+    </div>
+  </header>
+
+  <!-- Available Bags Section -->
+  <main>
+    <h1>Available Bags</h1>
+
+    <div class="bags-container">
+      <!-- Example Bag Card (update image paths accordingly) -->
+      <div class="bag-card"><img src="{{ url_for('static', filename='images/bag1.jpg') }}"><h3>Backpack</h3><p>Stylish and durable backpack for everyday use.</p><p class="price">$49.99</p></div>
+      <div class="bag-card"><img src="{{ url_for('static', filename='images/bag2.jpg') }}"><h3>Tote Bag</h3><p>Perfect for shopping or a casual day out.</p><p class="price">$29.99</p></div>
+      <!-- ... repeat for all bags ... -->
+    </div>
+  </main>
+
+  <!-- Common Footer -->
+  <footer>
+    <p>© 2025 BagBazaar. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seller Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+
+<body>
+
+  <header>
+    <h1>Seller Dashboard</h1>
+  </header>
+
+  <div class="dashboard-container">
+
+    <h2>My Uploaded Bags</h2>
+    <div class="bag-list">
+      <!-- Example bag card -->
+      <div class="bag-card">
+        <img src="{{ url_for('static', filename='images/bag1.jpg') }}" alt="Bag 1">
+        <h3>Travel Backpack</h3>
+        <p class="price">$59.99</p>
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+
+      <div class="bag-card">
+        <img src="{{ url_for('static', filename='images/bag2.jpg') }}" alt="Bag 2">
+        <h3>Office Laptop Bag</h3>
+        <p class="price">$69.99</p>
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+
+      <!-- You can loop over real data from backend later -->
+    </div>
+
+    <div class="add-bag-form">
+      <h2>Add New Bag</h2>
+      <form method="POST" action="{{ url_for('upload_bag') }}" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Bag Name" required>
+        <textarea name="description" placeholder="Bag Description" rows="3" required></textarea>
+        <input type="number" name="price" placeholder="Price in $" required>
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload Bag</button>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>

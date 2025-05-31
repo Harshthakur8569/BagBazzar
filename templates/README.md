@@ -61,6 +61,7 @@ Example:
 
 Developed by: Harsh Thakur
 GitHub: https://github.com/Harshthakur8569
+Project Repository: [BagBazzar](https://github.com/Harshthakur8569/BagBazzar)
 edX: https://www.edx.org/user/HT_2002
 Location: Delhi, India  
 Date: 2025-05-31

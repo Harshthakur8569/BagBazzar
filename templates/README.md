@@ -1,6 +1,6 @@
 =# BagBazzar
 
-#### Video Demo: <YOUR VIDEO URL HERE>
+#### Video Demo: https://drive.google.com/file/d/1OMeO0nU7NvYmBaPVp-4QREQV1h9z4f0d/view?usp=sharing
 
 ---
 
